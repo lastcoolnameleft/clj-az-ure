@@ -1,6 +1,6 @@
-# hello-world
+# clj-az-ure
 
-FIXME
+A Hello World app in Clojure on Azure
 
 ## Prerequisites
 
