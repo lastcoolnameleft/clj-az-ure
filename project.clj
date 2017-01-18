@@ -9,4 +9,7 @@
   :ring {:handler hello-world.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.0"]]}})
+                        [ring/ring-mock "0.3.0"]]}
+   :docker {:dependencies [[ring/ring-core "1.5.0"]
+                           [ring-server "0.4.0"]
+                           [ring/ring-jetty-adapter "1.3.2"]]}})
