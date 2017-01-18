@@ -12,8 +12,9 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 To start a web server for the application, run:
 
-    lein ring server
+    docker build -t my-clj-app .
+    docker run -p 3000:3000 -it --rm --name my-running-app my-clj-app
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright (c) 2017 Tommy Falgout
