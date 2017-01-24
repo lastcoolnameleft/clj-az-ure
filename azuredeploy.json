@@ -82,7 +82,7 @@
                       "[resourceId('Microsoft.Web/Sites', parameters('sites_lastcoolnameleft_clojure_name'))]"
                   ],
                   "properties": {
-                    "docker_custom_image_name": "[parameters('docker_image_name')]"
+                    "docker_custom_image_name": "lastcoolnameleft/clj-az-ure"
                   }
                 }
             ],
