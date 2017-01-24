@@ -18,18 +18,6 @@
     "variables": {},
     "resources": [
         {
-          "apiVersion": "2014-11-01",
-          "name": "appsettings",
-          "type": "config",
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
-          ],
-          "properties": {
-            "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
-            "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
-          }
-        },
-        {
             "comments": "Generalized from resource: '/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourceGroups/sandbox-webapp-linux/providers/Microsoft.Web/serverfarms/ServicePlana2bbde64-8d23'.",
             "type": "Microsoft.Web/serverfarms",
             "sku": {
@@ -89,7 +77,20 @@
                 ],
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ServicePlana2bbde64_8d23_name'))]"
             },
-            "resources": [],
+            "resources": [
+                {
+                  "apiVersion": "2014-11-01",
+                  "name": "appsettings",
+                  "type": "config",
+                  "dependsOn": [
+                    "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+                  ],
+                  "properties": {
+                    "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
+                    "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
+                  }
+                },
+            ],
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ServicePlana2bbde64_8d23_name'))]"
             ]
