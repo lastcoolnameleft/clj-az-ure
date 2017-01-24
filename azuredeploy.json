@@ -83,7 +83,7 @@
                   "name": "appsettings",
                   "type": "config",
                   "dependsOn": [
-                      "name": "[resourceId('Microsoft.Web/Sites', [parameters('sites_lastcoolnameleft_clojure_name')]"
+                      "[resourceId('Microsoft.Web/Sites', [parameters('sites_lastcoolnameleft_clojure_name')]"
                   ],
                   "properties": {
                     "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
