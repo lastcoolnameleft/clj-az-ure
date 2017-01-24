@@ -84,10 +84,9 @@
                   "type": "config",
                   "dependsOn": [],
                   "properties": {
-                    "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
-                    "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
+                    "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
                   }
-                },
+                }
             ],
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ServicePlana2bbde64_8d23_name'))]"
