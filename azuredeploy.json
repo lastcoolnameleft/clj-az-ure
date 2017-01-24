@@ -39,6 +39,15 @@
             "dependsOn": []
         },
         {
+          "apiVersion": "2014-11-01",
+          "name": "appsettings",
+          "type": "config",
+          "dependsOn": [],
+          "properties": {
+            "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
+          }
+        },
+        {
             "comments": "Generalized from resource: '/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourceGroups/sandbox-webapp-linux/providers/Microsoft.Web/sites/lastcoolnameleft-clojure'.",
             "type": "Microsoft.Web/sites",
             "kind": "app",
