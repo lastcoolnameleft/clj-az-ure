@@ -82,7 +82,9 @@
                   "apiVersion": "2014-11-01",
                   "name": "appsettings",
                   "type": "config",
-                  "dependsOn": [],
+                  "dependsOn": [
+                      "name": "[parameters('sites_lastcoolnameleft_clojure_name')]"
+                  ],
                   "properties": {
                     "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
                   }
