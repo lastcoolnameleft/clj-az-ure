@@ -41,7 +41,7 @@
         {
           "apiVersion": "2014-11-01",
           "name": "appsettings",
-          "type": "config",
+          "type": "Microsoft.Web/sites",
           "dependsOn": [],
           "properties": {
             "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
