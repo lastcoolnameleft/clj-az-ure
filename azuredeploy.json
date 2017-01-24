@@ -39,12 +39,13 @@
             "dependsOn": []
         },
         {
-          "apiVersion": "2014-11-01",
-          "name": "appsettings",
-          "type": "Microsoft.Web/sites",
-          "dependsOn": [],
-          "properties": {
-            "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
+            "apiVersion": "2014-11-01",
+            "name": "appsettings",
+            "type": "Microsoft.Web/sites",
+            "location": "West Europe",
+            "dependsOn": [],
+            "properties": {
+                "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
           }
         },
         {
