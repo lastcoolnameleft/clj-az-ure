@@ -31,6 +31,20 @@ You will need [Leiningen][] 2.0.0 or above installed.
     docker build -t lastcoolnameleft/clj-az-ure .
     docker push lastcoolnameleft/clj-az-ure
   
+### Deploy to Azure
+    
+    Click the new resource plus button. "+"
+    Click "Web + Mobile"
+    Select "Web App on Linux"
+    Enter globally unique app name.  e.g. lastcoolnameleft-clj-az-ure
+    Create new Resource Group
+    Click "Configure Container"
+    Select "Image Source" -> "Docker Hub"
+    Enter in "Image and optional tag": lastcoolnameleft/clj-az-ure
+    Leave Startup command blank.
+    Click OK
+    Click "Create"
+    
 ## License
 
 Copyright (c) 2017 Tommy Falgout
