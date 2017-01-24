@@ -2,6 +2,10 @@
 
 A Hello World app in Clojure on Azure
 
+FYI, currently broken.  Experimenting to fix.
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
+
 ## Purpose
 
 ```
@@ -31,7 +35,7 @@ You will need [Leiningen][] 2.0.0 or above installed.
     docker build -t lastcoolnameleft/clj-az-ure .
     docker push lastcoolnameleft/clj-az-ure
   
-### Deploy to Azure
+### Deploy to Azure (Portal)
     
     Click the new resource plus button. "+"
     Click "Web + Mobile"
@@ -44,7 +48,14 @@ You will need [Leiningen][] 2.0.0 or above installed.
     Leave Startup command blank.
     Click OK
     Click "Create"
-    
+
+### Deploy to Azure (CLI)
+     
+     az group create -n 'cli-webapp' -l 'southcentralus'
+     az appservice plan create -n 'cli-app-service' -g 'cli-webapp' --is-linux -l 'westeurope'
+     az appservice web create -n 'cli-clj-lastcoolnameleft2' -p 'cli-app-service' -g 'cli-webapp'
+     az appservice web config container update -c lastcoolnameleft/clj-az-ure --resource-group cli-webapp --name cli-clj-lastcoolnameleft2
+     
 ## License
 
 Copyright (c) 2017 Tommy Falgout
