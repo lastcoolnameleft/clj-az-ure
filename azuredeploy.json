@@ -39,16 +39,6 @@
             "dependsOn": []
         },
         {
-            "apiVersion": "2014-11-01",
-            "name": "appsettings",
-            "type": "Microsoft.Web/sites",
-            "location": "West Europe",
-            "dependsOn": [],
-            "properties": {
-                "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
-          }
-        },
-        {
             "comments": "Generalized from resource: '/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourceGroups/sandbox-webapp-linux/providers/Microsoft.Web/sites/lastcoolnameleft-clojure'.",
             "type": "Microsoft.Web/sites",
             "kind": "app",
@@ -59,6 +49,8 @@
                 "hidden-related:/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourcegroups/sandbox-webapp-linux/providers/Microsoft.Web/serverfarms/ServicePlana2bbde64-8d23": "empty"
             },
             "properties": {
+                "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
+                "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
                 "name": "[parameters('sites_lastcoolnameleft_clojure_name')]",
                 "hostNames": [
                     "lastcoolnameleft-clojure.azurewebsites.net"
