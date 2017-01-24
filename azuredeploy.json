@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "docker_custom_image_name": {
+        "docker_image_name": {
             "defaultValue": "lastcoolnameleft/clj-az-ure",
             "type": "String"
         },
@@ -82,7 +82,7 @@
                       "[resourceId('Microsoft.Web/Sites', parameters('sites_lastcoolnameleft_clojure_name'))]"
                   ],
                   "properties": {
-                    "docker_custom_image_name": "lastcoolnameleft/clj-az-ure"
+                    "docker_custom_image_name": "[parameters('docker_image_name')]"
                   }
                 }
             ],
