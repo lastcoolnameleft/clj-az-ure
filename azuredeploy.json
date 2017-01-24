@@ -2,6 +2,10 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "DOCKER_CUSTOM_IMAGE_NAME": {
+            "defaultValue": "lastcoolnameleft/clj-az-ure",
+            "type": "String"
+        },
         "serverfarms_ServicePlana2bbde64_8d23_name": {
             "defaultValue": "ServicePlana2bbde64-8d23",
             "type": "String"
