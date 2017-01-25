@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverfarms_ServicePlan8861d424_a9cc_name": {
+            "defaultValue": "ServicePlan8861d424-a9cc",
+            "type": "String"
+        },
+        "sites_clj_az_ure_name": {
+            "defaultValue": "clj-az-ure",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourceGroups/clz-az-ure-rg/providers/Microsoft.Web/serverfarms/ServicePlan8861d424-a9cc'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            },
+            "kind": "linux",
+            "name": "[parameters('serverfarms_ServicePlan8861d424_a9cc_name')]",
+            "apiVersion": "2015-08-01",
+            "location": "West Europe",
+            "properties": {
+                "name": "[parameters('serverfarms_ServicePlan8861d424_a9cc_name')]",
+                "numberOfWorkers": 1
+            },
+            "resources": [],
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourceGroups/clz-az-ure-rg/providers/Microsoft.Web/sites/clj-az-ure'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_clj_az_ure_name')]",
+            "apiVersion": "2015-08-01",
+            "location": "West Europe",
+            "tags": {
+                "hidden-related:/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourcegroups/clz-az-ure-rg/providers/Microsoft.Web/serverfarms/ServicePlan8861d424-a9cc": "empty"
+            },
+            "properties": {
+                "name": "[parameters('sites_clj_az_ure_name')]",
+                "hostNames": [
+                    "clj-az-ure.azurewebsites.net"
+                ],
+                "enabledHostNames": [
+                    "clj-az-ure.azurewebsites.net",
+                    "clj-az-ure.scm.azurewebsites.net"
+                ],
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_clj_az_ure_name'),'.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    },
+                    {
+                        "name": "[concat(parameters('sites_clj_az_ure_name'),'.scm.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ServicePlan8861d424_a9cc_name'))]"
+            },
+            "resources": [],
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ServicePlan8861d424_a9cc_name'))]"
+            ]
+        }
+    ]
+}
