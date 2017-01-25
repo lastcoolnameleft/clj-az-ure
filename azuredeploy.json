@@ -78,11 +78,11 @@
                   "apiVersion": "2015-08-01",
                   "name": "appsettings",
                   "type": "config",
-                  "reserved": "true",
                   "dependsOn": [
                       "[resourceId('Microsoft.Web/Sites', parameters('sites_lastcoolnameleft_clojure_name'))]"
                   ],
                   "properties": {
+                    "reserved": "true",
                     "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
                   }
                 }
