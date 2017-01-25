@@ -83,7 +83,6 @@
                       "[resourceId('Microsoft.Web/Sites', parameters('sites_lastcoolnameleft_clojure_name'))]"
                   ],
                   "properties": {
-                    "reserved": "true",
                     "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
                   }
                 }
