@@ -28,7 +28,7 @@
                 "capacity": 1
             },
             "kind": "linux",
-            "reserved": "true",
+            "Reserved": "true",
             "name": "[parameters('serverfarms_ServicePlana2bbde64_8d23_name')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
