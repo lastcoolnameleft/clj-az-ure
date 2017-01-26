@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "DOCKER_CUSTOM_IMAGE_NAME": {
+        "docker_image_name": {
             "defaultValue": "lastcoolnameleft/clj-az-ure",
             "type": "String"
         },
@@ -32,8 +32,7 @@
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
-                "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
-                "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
+                "reserved": "true",
                 "name": "[parameters('serverfarms_ServicePlana2bbde64_8d23_name')]",
                 "numberOfWorkers": 1
             },
@@ -51,8 +50,6 @@
                 "hidden-related:/subscriptions/df8428d4-bc25-4601-b458-1c8533ceec0b/resourcegroups/sandbox-webapp-linux/providers/Microsoft.Web/serverfarms/ServicePlana2bbde64-8d23": "empty"
             },
             "properties": {
-                "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure",
-                "docker_custom_image_name": "lastcoolnameleft/clj-az-ure",
                 "name": "[parameters('sites_lastcoolnameleft_clojure_name')]",
                 "hostNames": [
                     "lastcoolnameleft-clojure.azurewebsites.net"
@@ -79,10 +76,12 @@
             },
             "resources": [
                 {
-                  "apiVersion": "2014-11-01",
+                  "apiVersion": "2015-08-01",
                   "name": "appsettings",
                   "type": "config",
-                  "dependsOn": [],
+                  "dependsOn": [
+                      "[resourceId('Microsoft.Web/Sites', parameters('sites_lastcoolnameleft_clojure_name'))]"
+                  ],
                   "properties": {
                     "DOCKER_CUSTOM_IMAGE_NAME": "lastcoolnameleft/clj-az-ure"
                   }
