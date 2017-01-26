@@ -2,7 +2,6 @@
 
 A Hello World app in Clojure on Azure
 
-FYI, currently broken.  Experimenting to fix.
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 
@@ -51,10 +50,10 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 ### Deploy to Azure (CLI)
      
-     az group create -n 'cli-webapp' -l 'southcentralus'
-     az appservice plan create -n 'cli-app-service' -g 'cli-webapp' --is-linux -l 'westeurope'
-     az appservice web create -n 'cli-clj-lastcoolnameleft2' -p 'cli-app-service' -g 'cli-webapp'
-     az appservice web config container update -c lastcoolnameleft/clj-az-ure --resource-group cli-webapp --name cli-clj-lastcoolnameleft2
+     az group create -n 'clj-az-ure-rg' -l 'westus'
+     az appservice plan create -n 'clj-az-ure-as' -g 'clj-az-ure-rg' --is-linux -l 'westus'
+     az appservice web create -n 'lastcoolnameleft-clj-az-ure' -p 'clj-az-ure-as' -g 'clj-az-ure-rg'
+     az appservice web config container update -c lastcoolnameleft/clj-az-ure --resource-group clj-az-ure-rg --name lastcoolnameleft-clj-az-ure
      
 ## License
 
