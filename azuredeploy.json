@@ -32,7 +32,7 @@
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
-                "reserved": "true",
+                "reserved": true,
                 "name": "[parameters('serverfarms_ServicePlana2bbde64_8d23_name')]",
                 "numberOfWorkers": 1
             },
